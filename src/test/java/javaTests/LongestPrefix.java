@@ -1,64 +1,71 @@
 package javaTests;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Set;
-
-public class LongestPrefix {
-
+public class LongestPrefixBetter {
     public static void main(String[] args) {
-        String[] words = {"apple", "apply", "appl", "appium", "applied"};
+        String[] words = {"apple", "app", "apply", "appium", "applied", "apps"};
+        // longest(words);
 
-        System.out.println(longest(words));
+        String[] words1 = {"apple", "apply", "appium", "applied", "apps"};
+        longest1(words1);
     }
 
-    private static String longest(String[] words) {
-        int shortestWordSize = Integer.MAX_VALUE;
-        String shortestWord = "";
+    private static void longest1(String[] words1) {
+        //find shortest word
+        int count, index = 0;
+        int least = Integer.MAX_VALUE;
 
-        for (String word : words) {
-            if (word.length() < shortestWordSize) {
-                shortestWordSize = word.length();//5,
-                shortestWord = word;
+        for (int i = 0; i < words1.length; i++) {
+            count = words1[i].length();
+            if (count < least) {
+                least = count; //4
+                index = i;
             }
         }
-        System.out.println("shortestWordSize: " + shortestWordSize);
-        System.out.println("shortestWord: " + shortestWord);
+        System.out.println("shortest word: " + words1[index] + " with length: " + least);
+        String smallestWord = words1[index];
 
-        ArrayList<String> arrlist = new ArrayList<String>();
-        for (String word : words) {
-            if (!(word.equals(shortestWord))) {
-                arrlist.add(word);
-            }
-        }
-        System.out.println(arrlist);
-
-        char[] arr = shortestWord.toCharArray(); //{'a', 'p', 'p', 's'}
-        int distance = arr.length;
-        String prefix = "";
-
-        Set<String> prefixes = new HashSet<String>();
-
-        for (String word : arrlist) {
-            prefix = "";
-            for (int j = 0; j < distance; j++) {
-                if (word.charAt(j) == arr[j]) {
-                    prefix += arr[j]; //"app",
+        boolean flag = false;
+        for (int i = 0; i < words1.length; i++) {
+            flag = false;
+            System.out.println("least outside loop: " + least);
+            for (int j = least; j >= 0; j--) {
+                if (words1[i].substring(0, j).equals(smallestWord)) {
+                    flag = true;
+                    least = j; //3
+                    System.out.println("least in loop: " + least);
+                    break;
                 }
+                smallestWord = smallestWord.substring(0, smallestWord.length()-1);
             }
-            System.out.println("prefix: " + prefix);
-            prefixes.add(prefix);
         }
-        System.out.println(prefixes);
+        if (flag){
+            System.out.println("longest prefix is: " + smallestWord);
+        }
+    }
 
-        int shortestPrefix = Integer.MAX_VALUE;
-        String shortestPrefixV = "";
-        for (String prefixS: prefixes){
-            if (prefixS.length() < shortestPrefix){
-                shortestPrefix = prefixS.length();
-                shortestPrefixV = prefixS;
+
+    private static void longest(String[] words) {
+        //find shortest word
+        int count, index = 0;
+        int least = Integer.MAX_VALUE;
+
+        for (int i = 0; i < words.length; i++) {
+            count = words[i].length();
+            if (count < least) {
+                least = count;
+                index = i;
             }
         }
-        return shortestPrefixV;
+        System.out.println("shortest word: " + words[index] + " with length: " + least);
+        String smallestWord = words[index];
+
+        boolean flag = true;
+        for (int i = 0; i < words.length; i++) {
+            if (!(words[i].substring(0, least).equals(smallestWord))) {
+                flag = false;
+                break;
+            }
+        }
+        System.out.println(flag);
     }
 }
