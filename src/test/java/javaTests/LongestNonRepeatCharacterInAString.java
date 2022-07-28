@@ -13,13 +13,12 @@ public class LongestNonRepeatCharacterInAString {
     }
 
     private static String longestStr(String test) {
-        char[] arr = test.toCharArray();
         String result = "";
         Set<Character> set = new LinkedHashSet<Character>();
 
         for (int i = 0; i < test.length(); i++) {
             if (!set.contains(test.charAt(i))) {
-                set.add(arr[i]);
+                set.add(test.charAt(i));
             } else break;
         }
 

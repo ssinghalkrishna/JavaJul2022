@@ -8,7 +8,6 @@ public class SubsequentArray {
         System.out.println(isSubsequent(arr2, arr1));
     }
 
-    //better code
     private static boolean isSubsequent(int[] arr2, int[] arr1){
         int start = -1;
         for (int i = 0; i < arr2.length; i++){
@@ -27,41 +26,4 @@ public class SubsequentArray {
         return true;
     }
 
-    private static boolean isSubsequent1(int[] arr2, int[] arr1) {
-        int first = 0;
-        int second = 0;
-        int start = 0;
-        for (int i = 0; i < arr2.length; i++) {
-            boolean isPresent = false;
-            if (first == 0){
-                start = 0;
-            }
-            else {
-                start = first +1;
-            }
-            for (int j = start; j < arr1.length; j++) {
-                if (arr2[i] == arr1[j]) {
-                    if (i == 0){
-                        first = j;
-                    }
-                    else if (i == 1){
-                        second = j;
-                    }
-                    else {
-                        first = second;
-                        second = j;
-                    }
-                    if (second < first && second != 0){
-                        return false;
-                    }
-                    isPresent = true;
-                    break;
-                }
-            }
-            if (isPresent == false){
-                return false;
-            }
-        }
-        return true;
-    }
 }

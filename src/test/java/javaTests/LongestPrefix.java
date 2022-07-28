@@ -1,6 +1,6 @@
 package javaTests;
 
-public class LongestPrefixBetter {
+public class LongestPrefix {
     public static void main(String[] args) {
         String[] words = {"apple", "app", "apply", "appium", "applied", "apps"};
         // longest(words);
