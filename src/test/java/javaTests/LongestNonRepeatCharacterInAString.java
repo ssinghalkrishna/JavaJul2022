@@ -1,4 +1,4 @@
-package JavaTests;
+package javaTests;
 
 import java.util.LinkedHashSet;
 import java.util.Set;
@@ -6,7 +6,7 @@ import java.util.Set;
 /**
  * print longest continuous string from a string until a char repeats
  */
-public class Practice3 {
+public class LongestContinuousString {
     public static void main(String[] args) {
         String test = "abckrbbda";
         System.out.println(longestStr(test));

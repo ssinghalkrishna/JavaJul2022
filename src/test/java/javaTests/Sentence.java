@@ -1,10 +1,10 @@
-package junit;
+package javaTests;
 
 public class Practice {
     public static void main(String[] args){
         String sentence = "Java coding is fun and challenging";
         //swap first and last char of each word in sentence
-        //swap(sentence);
+       // swap(sentence);
         swap1(sentence);
     }
 

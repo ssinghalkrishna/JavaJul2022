@@ -1,9 +1,9 @@
-package junit;
+package javaTests;
 
 import java.util.LinkedList;
 import java.util.List;
 
-public class Practice3 {
+public class Practice6 {
     //insert element at head and tail of linked list
 
     public static void main(String[] args) {
