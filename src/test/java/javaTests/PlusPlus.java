@@ -1,6 +1,6 @@
 package javaTests;
 
-public class Practice5 {
+public class PlusPlus {
 
     private static String echoCommand = "echo %s > /sys/kernel/pixel_debug/trigger";
 

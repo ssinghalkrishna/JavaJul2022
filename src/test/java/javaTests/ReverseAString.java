@@ -1,6 +1,6 @@
 package javaTests;
 
-public class Practice4 {
+public class ReverseAString {
 
     public static void main(String[] args){
         String example = "aAbB" ; //reverse shall be llew;

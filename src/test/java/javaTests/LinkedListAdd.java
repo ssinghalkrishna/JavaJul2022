@@ -3,11 +3,11 @@ package javaTests;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Practice6 {
+public class LinkedListAdd {
     //insert element at head and tail of linked list
 
     public static void main(String[] args) {
-        List<Integer> list = new LinkedList<>();
+        List<Integer> list = new java.util.LinkedList<>();
         list.add(1);
         list.add(2);
         list.add(3);

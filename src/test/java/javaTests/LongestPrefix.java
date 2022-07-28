@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
-public class LongestWord {
+public class LongestPrefix {
 
     public static void main(String[] args) {
         String[] words = {"apple", "apply", "appl", "appium", "applied"};

@@ -6,7 +6,7 @@ import java.util.Set;
 /**
  * print longest continuous string from a string until a char repeats
  */
-public class LongestContinuousString {
+public class LongestNonRepeatCharacterInAString {
     public static void main(String[] args) {
         String test = "abckrbbda";
         System.out.println(longestStr(test));

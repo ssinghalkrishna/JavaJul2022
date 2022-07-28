@@ -2,7 +2,7 @@ package javaTests;
 
 import java.util.ArrayList;
 
-public class Study {
+public class StudyGreenBall {
     private static int index = 0;
 
     private static boolean isGreenBallPresent(ArrayList<Character> ball) {

@@ -1,6 +1,6 @@
 package javaTests;
 
-public class Practice {
+public class Sentence {
     public static void main(String[] args){
         String sentence = "Java coding is fun and challenging";
         //swap first and last char of each word in sentence
