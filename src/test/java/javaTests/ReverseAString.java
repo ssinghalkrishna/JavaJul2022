@@ -1,5 +1,7 @@
 package javaTests;
 
+import java.util.Arrays;
+
 public class ReverseAString {
 
     public static void main(String[] args){
@@ -24,6 +26,10 @@ public class ReverseAString {
            cArr[i] = cArr[(cArr.length-1) - i];
             cArr[(cArr.length-1) - i] = temp;
         }
+        System.out.println("1" + cArr);
+        System.out.println("2" + Arrays.toString(cArr));
+        System.out.println("3" + String.valueOf(cArr));
         return String.valueOf(cArr);
+
     }
 }
