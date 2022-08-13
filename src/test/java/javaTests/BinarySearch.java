@@ -13,7 +13,7 @@ public class BinarySearch {
         String word = "engineering";
         String example = "abcirghjkl";
         uniqueLettersInWord(word, example);
-        System.out.println(findInSortedArray(new int[]{3, 5, 8, 9, 10, 45}, 3));
+       // System.out.println(findInSortedArray(new int[]{3, 5, 8, 9, 10, 45}, 3));
     }
 
     private static boolean findInSortedArray(int[] arr, int num) {
@@ -34,18 +34,34 @@ public class BinarySearch {
     }
 
     private static void uniqueLettersInWord(String word, String example) {
-        Set<Character> set = new HashSet<Character>();
+        Set<Character> setWord = new HashSet<Character>();
         for (int i = 0; i < word.length(); i++) {
-            set.add(word.charAt(i));
+            setWord.add(word.charAt(i));
         }
-        System.out.println(set);
+        System.out.println(setWord);
 
-        Set<Character> set1 = new HashSet<Character>();
+        Set<Character> setExample = new HashSet<Character>();
         for (int i = 0; i < example.length(); i++) {
-            if (set.contains(example.charAt(i))) {
-                set1.add(example.charAt(i));
+            setExample.add(example.charAt(i));
+        }
+        System.out.println(setExample);
+
+        Set<Character> setResult = new HashSet<Character>();
+//        for (int i = 0; i < example.length(); i++) {
+//            if (setWord.contains(example.charAt(i))) {
+//                setResult.add(example.charAt(i));
+//            }
+//        }
+//        System.out.println(setResult);
+        Character[] ch = new Character[setExample.size()];
+
+        Character[] ch1 = setExample.toArray(ch);
+
+        for(int i = 0; i < ch1.length; i++){
+            if (setWord.contains(ch1[i])){
+               setResult.add(ch1[i]);
             }
         }
-        System.out.println(set1);
+        System.out.println(setResult);
     }
 }
