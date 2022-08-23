@@ -1,5 +1,7 @@
 package javaTests;
 
+import java.util.ArrayList;
+
 public class LongestPrefix {
     public static void main(String[] args) {
         String[] words = {"apple", "app", "apply", "appium", "applied", "apps"};
@@ -43,7 +45,6 @@ public class LongestPrefix {
         }
     }
 
-
     private static void longest(String[] words) {
         //find shortest word
         int count, index = 0;
@@ -68,4 +69,43 @@ public class LongestPrefix {
         }
         System.out.println(flag);
     }
+
+    private static void longestPrefix(String[] words){
+        int shortestLength = Integer.MAX_VALUE;
+        String shortestWord = "";
+        for (String word: words){
+            if (word.length() < shortestLength){
+                shortestLength = word.length();
+                shortestWord = word;
+            }
+        }
+        ArrayList<String> newWords = new ArrayList<>();
+        for (String word: words){
+            if (!words.equals(shortestWord)){
+                newWords.add(word);
+            }
+        }
+
+        String shortestPrefix = "";
+
+        for (int i = 0; i < shortestWord.length(); i++) {
+            boolean flag = false;
+            for (String word : newWords) {
+                if (!(shortestWord.charAt(i) == word.charAt(i))) {
+                    flag = false;
+                    break;
+                } else {
+                    flag = true;
+                }
+            }
+            if (flag) {
+                shortestPrefix += shortestWord.charAt(i);
+            }
+            else {
+                break;
+            }
+        }
+        System.out.println(shortestPrefix);
+    }
+
 }

@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class UniqueDigitsInNumber {
-    // Print all numbers from 100 to 999 inclusive, which does not have duplicate digits.
+    // Print all numbers from 100 to 999 inclusive, which do not have duplicate digits.
     //102, 103 are fine
     // not 100, 101, 111, 122
     public static void main(String[] args) {

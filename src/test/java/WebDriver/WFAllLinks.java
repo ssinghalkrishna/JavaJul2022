@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
-public class WF1 {
+public class WFAllLinks {
 
     WebDriver driver;
     WebDriverWait wait;
