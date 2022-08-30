@@ -1,0 +1,119 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 6666467857,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.start()"
+            }
+          }
+        ],
+        "line": 5,
+        "name": "Search on Careers",
+        "description": "",
+        "id": "reqs;search-on-careers",
+        "after": [
+          {
+            "result": {
+              "duration": 254705132,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.finish()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1653663376,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I open careers page",
+            "match": {
+              "location": "ReqsStepdefs.iOpenCareersPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5557459699,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I search for \"Principal Automation Engineer\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Principal Automation Engineer",
+                  "offset": 14
+                }
+              ],
+              "location": "ReqsStepdefs.iSearchFor(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 165259718,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I verify that position city is \"San Francisco\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "San Francisco",
+                  "offset": 32
+                }
+              ],
+              "location": "ReqsStepdefs.iVerifyThatPositionCityIs(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@reqs"
+          },
+          {
+            "name": "@reqs1"
+          },
+          {
+            "name": "@smoke"
+          },
+          {
+            "name": "@sanity"
+          },
+          {
+            "name": "@regression"
+          }
+        ]
+      }
+    ],
+    "name": "Reqs",
+    "description": "",
+    "id": "reqs",
+    "keyword": "Feature",
+    "uri": "src/test/resources/features/reqs.feature",
+    "tags": [
+      {
+        "name": "@reqs",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
