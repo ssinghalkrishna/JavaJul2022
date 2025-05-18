@@ -16,16 +16,17 @@ public class ReverseSpecialCharsInAString {
             return test;
         }
         String specialChars = "";
-
         for (int i = 0; i < test.length(); i++) {
             if (!(test.charAt(i) >= 'a' && test.charAt(i) <= 'z')) {
                 specialChars += test.charAt(i);
             }
         }
         System.out.println("specialChars: " + specialChars);
-
-        if (specialChars.length() <= 1) { // "ac%de"
-            return test;
+        if (specialChars.length() == 0) { // "ac%de"
+            return "No special chars found";
+        }
+        if (specialChars.length() == 1) { // "ac%de"
+            return specialChars;
         }
 // ac#de#gh&ty& -> #& - getting complicated
 

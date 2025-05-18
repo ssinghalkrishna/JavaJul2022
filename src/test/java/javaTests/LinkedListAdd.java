@@ -7,7 +7,7 @@ public class LinkedListAdd {
     //insert element at head and tail of linked list
 
     public static void main(String[] args) {
-        List<Integer> list = new java.util.LinkedList<>();
+        List<Integer> list = new LinkedList<>();
         list.add(1);
         list.add(2);
         list.add(3);
