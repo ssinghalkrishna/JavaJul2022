@@ -34,7 +34,8 @@ public class AddTwoLinkedLists {
                 int sum = list2.get(i) + list1.get(j);
                 if (sum >= 10) {
                     sum =  sum % 10;
-                    carryover = 1;
+                  //  carryover = 1;
+                    carryover = sum/10;
                     result.add(sum);
                     --i;
                     --j;

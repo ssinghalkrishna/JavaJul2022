@@ -1,4 +1,4 @@
-package javaTests;
+package javaTests.Easy;
 
 public class ReverseAlphabets {
     public static void main(String[] args) {

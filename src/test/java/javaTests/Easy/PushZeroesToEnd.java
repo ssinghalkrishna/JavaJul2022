@@ -1,4 +1,4 @@
-package javaTests;
+package javaTests.Easy;
 
 import java.util.ArrayList;
 import java.util.Arrays;

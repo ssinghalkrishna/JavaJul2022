@@ -1,4 +1,4 @@
-package javaTests;
+package javaTests.Easy;
 
 public class Sentence {
     public static void main(String[] args){

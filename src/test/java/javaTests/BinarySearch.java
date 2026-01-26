@@ -12,8 +12,8 @@ public class BinarySearch {
 
         String word = "engineering";
         String example = "abcirghjkl";
-        uniqueLettersInWord(word, example);
-       // System.out.println(findInSortedArray(new int[]{3, 5, 8, 9, 10, 45}, 3));
+    //    uniqueLettersInWord(word, example);
+        System.out.println(findInSortedArray(new int[]{3, 5, 8, 9, 10, 45}, 6));
     }
 
     private static boolean findInSortedArray(int[] arr, int num) {

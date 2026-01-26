@@ -1,4 +1,4 @@
-package javaTests;
+package javaTests.Easy;
 
 public class PlusPlus {
 
